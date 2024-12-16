@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      network: host
+    container_name: markdown-converter
+    ports:
+      - "5050:5050"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: development
